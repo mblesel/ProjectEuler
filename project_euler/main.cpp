@@ -1,12 +1,18 @@
 #include<iostream>
 #include<chrono>
 
+#include"problems.h"
+#include"StopWatch.h"
+
 int main()
 {
-	auto startTime = std::chrono::steady_clock::now();
+	StopWatch<std::chrono::milliseconds> clock;
 	
+	clock.start();
+	
+	std::cout << problem1() << std::endl;
 
-	auto elapsedTime = std::chrono::steady_clock::now() - startTime;
-	std::cout << "Elapsed Time: " << elapsedTime.count() << std::endl;
+	std::cout << "Elapsed Time: " << clock.stop() << "ms";
+
 	return 0;
 }
