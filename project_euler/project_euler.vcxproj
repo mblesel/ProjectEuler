@@ -65,9 +65,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="primefunctions.cpp" />
     <ClCompile Include="problems.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="primefunctions.h" />
     <ClInclude Include="problems.h" />
     <ClInclude Include="StopWatch.h" />
   </ItemGroup>

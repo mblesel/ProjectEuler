@@ -1,6 +1,8 @@
 #include"problems.h"
 
-#include<iostream>
+#include"primefunctions.h"
+
+#include<cmath>
 
 int problem1()
 {
@@ -45,7 +47,15 @@ long problem3()
 {
 	long long number = 600851475143;
 
+	for (long i = static_cast<long>(std::sqrt(number)); i > 1; --i)
+	{
+		if ((number % i == 0 ) && isPrime(i))
+		{
+			return i;
+		}
+	}
 
 	return 0;
 
 }
+

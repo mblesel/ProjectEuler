@@ -10,7 +10,7 @@ int main()
 	
 	clock.start();
 	
-	std::cout << problem2() << std::endl;
+	std::cout << problem3() << std::endl;
 
 	std::cout << "Elapsed Time: " << clock.stop() << "ms";
 
