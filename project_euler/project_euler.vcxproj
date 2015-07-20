@@ -65,13 +65,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="primefunctions.cpp" />
+    <ClCompile Include="helpfunctions.cpp" />
     <ClCompile Include="problems.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="primefunctions.h" />
+    <ClInclude Include="helpfunctions.h" />
     <ClInclude Include="problems.h" />
     <ClInclude Include="StopWatch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="problem8input.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

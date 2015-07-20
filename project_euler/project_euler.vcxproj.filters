@@ -21,7 +21,7 @@
     <ClCompile Include="problems.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="primefunctions.cpp">
+    <ClCompile Include="helpfunctions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -32,8 +32,13 @@
     <ClInclude Include="StopWatch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="primefunctions.h">
+    <ClInclude Include="helpfunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="problem8input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
