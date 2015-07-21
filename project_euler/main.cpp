@@ -11,7 +11,7 @@ int main()
 	
 	clock.start();
 	
-	std::cout << "Result: " << problem14() << std::endl;
+	std::cout << "Result: " << problem15() << std::endl;
 
 	std::cout << "Elapsed Time: " << clock.stop() << "ms";
 

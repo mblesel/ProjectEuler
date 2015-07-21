@@ -154,3 +154,60 @@ int problem14()
 
 	return bestStartnumber;
 }
+
+long long f(int x, int y, int XLIMIT, int YLIMIT, long long matrix[21][21])
+{
+	if (matrix[x][y] > 0)
+	{
+		return matrix[x][y];
+	}
+
+
+	if (x < XLIMIT && y < YLIMIT )
+	{
+		return f(x + 1, y, XLIMIT, YLIMIT, matrix) + f(x, y + 1, XLIMIT, YLIMIT, matrix);
+	}
+	else if (x < XLIMIT)
+	{
+		return f(x + 1, y, XLIMIT, YLIMIT, matrix);
+	}
+	else if (y < YLIMIT)
+	{
+		return f(x, y + 1, XLIMIT, YLIMIT, matrix);
+	}
+	else
+	{
+		return 1;
+	}
+
+}
+
+long long problem15()
+{
+	const int N = 20;
+	long long matrix[N+1][N+1];
+	
+	matrix[2][2] = 0;
+	matrix[1][1] = 2;
+
+	for (int i = N; i >= 0; --i)
+	{
+		for (int j = N; j >= 0; --j)
+		{
+			matrix[i][j] = 0;
+		}
+	}
+	for (int i = N; i >= 0; --i)
+	{
+		for (int j = N; j >= 0; --j)
+		{
+			if (matrix[i][j] == 0)
+			{
+				matrix[i][j] = f(i, j, N, N, matrix);
+			}
+		}
+	}
+
+	return matrix[0][0];
+	
+}
