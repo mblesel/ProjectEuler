@@ -1,3 +1,6 @@
-bool isPrime(long n);
+#include<vector>
 
-bool isPalindrome(long n);
+bool isPrime(int n);
+
+bool isPalindrome(int n);
+

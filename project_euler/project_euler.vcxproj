@@ -66,11 +66,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="helpfunctions.cpp" />
-    <ClCompile Include="problems.cpp" />
+    <ClCompile Include="problems1to10.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="helpfunctions.h" />
-    <ClInclude Include="problems.h" />
+    <ClInclude Include="problems1to10.h" />
     <ClInclude Include="StopWatch.h" />
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-#include"problems.h"
+#include"problems1to10.h"
 
 #include"helpfunctions.h"
 
@@ -8,6 +8,8 @@
 #include<string>
 #include<numeric>
 #include<functional>
+#include<bitset>
+#include<vector>
 
 int problem1()
 {
@@ -25,12 +27,12 @@ int problem1()
 }
 
 
-long problem2()
+int problem2()
 {
 	int first = 1;
 	int second = 2;
 	int next = first + second;
-	long result = 2;
+	int result = 2;
 
 	while (next <= 4000000)
 	{
@@ -48,11 +50,11 @@ long problem2()
 }
 
 
-long problem3()
+int problem3()
 {
 	long long number = 600851475143;
 
-	for (long i = static_cast<long>(std::sqrt(number)); i > 1; --i)
+	for (int i = static_cast<int>(std::sqrt(number)); i > 1; --i)
 	{
 		if ((number % i == 0 ) && isPrime(i))
 		{
@@ -65,15 +67,15 @@ long problem3()
 }
 
 
-long problem4()
+int problem4()
 {
-	long result = 0;
+	int result = 0;
 
 	for (int i = 999; i > 900; --i)
 	{
 		for (int j = 999; j > 900; --j)
 		{
-			long product = i*j;
+			int product = i*j;
 			if (isPalindrome(product) && product > result)
 			{
 				result = product;
@@ -84,9 +86,9 @@ long problem4()
 	return result;
 }
 
-long problem5()
+int problem5()
 {
-	for (long i = 20 * 19;; ++i)
+	for (int i = 20 * 19;; ++i)
 	{
 		if (i % 2 == 0 && i % 19 == 0 && i % 18 == 0 && i % 17 == 0 &&
 			i % 16 == 0 && i % 15 == 0 && i % 14 == 0 && i % 13 == 0 &&
@@ -97,10 +99,10 @@ long problem5()
 	}
 }
 
-long problem6()
+int problem6()
 {
-	long squaresum = 0;
-	long sum = 0;
+	int squaresum = 0;
+	int sum = 0;
 
 	for (int i = 1; i <= 100; ++i)
 	{
@@ -111,10 +113,10 @@ long problem6()
 	return (sum * sum - squaresum);
 }
 
-long problem7()
+int problem7()
 {
 	int primecounter = 1;
-	long primecandidate = 3;
+	int primecandidate = 3;
 
 	while (primecounter < 10001)
 	{
@@ -170,7 +172,58 @@ long long problem8()
 	return result;
 }
 
-long problem9()
+int problem9()
 {
-	return 0;
+	int a, b, c;
+
+	for (c = 1; c < 1000; ++c)
+	{
+		for (a = 1; a < 1000; ++a)
+		{
+			b = 1000 - c - a;
+
+			if (a*a + b*b == c*c)
+			{
+				return a*b*c;
+			}
+		}
+	}
+
+}
+
+
+long long problem10()
+{
+	std::bitset<2000000> sieve;
+
+	sieve[0].flip();
+	sieve[1].flip();
+
+	int p = 2;
+
+	while (p < 2000000)
+	{
+		for (int i = 1; p+2*p*i < 2000000; ++i)
+		{
+			sieve.set(p+2*p*i, 1);
+		}
+
+		do
+		{
+			p++;
+
+		} while (p < 2000000 && sieve.test(p));
+	}
+
+	long long result = 2;
+
+	for (int i = 3; i < 2000000; i += 2)
+	{
+		if (!sieve.test(i))
+		{
+			result += i;
+		}
+	}
+
+	return result;
 }
