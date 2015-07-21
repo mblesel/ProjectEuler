@@ -114,6 +114,8 @@ int problem14()
 	int bestStartnumber = 1;
 	int longestChain = 1;
 
+	std::vector<int> chainlengths(1000000, 0);
+
 	for (int i = 1; i < 1000000; i+=2)
 	{
 		int counter = 0;
@@ -124,6 +126,15 @@ int problem14()
 			if (n % 2 == 0)
 			{
 				n /= 2;
+
+				if (n < i)
+				{
+					if (chainlengths[n] != 0)
+					{
+						counter += chainlengths[n] + 1;
+						break;
+					}
+				}
 			}
 			else
 			{
@@ -131,6 +142,8 @@ int problem14()
 			}
 			counter++;
 		}
+
+		chainlengths[i] = counter;
 
 		if (counter > longestChain)
 		{
