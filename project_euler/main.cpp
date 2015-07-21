@@ -2,6 +2,7 @@
 #include<chrono>
 
 #include"problems1to10.h"
+#include"problems11to20.h"
 #include"StopWatch.h"
 
 int main()
@@ -10,7 +11,7 @@ int main()
 	
 	clock.start();
 	
-	std::cout << "Result: " << problem10() << std::endl;
+	std::cout << "Result: " << problem11() << std::endl;
 
 	std::cout << "Elapsed Time: " << clock.stop() << "ms";
 

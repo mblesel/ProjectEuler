@@ -24,6 +24,9 @@
     <ClCompile Include="problems1to10.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="problems11to20.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="StopWatch.h">
@@ -35,9 +38,15 @@
     <ClInclude Include="problems1to10.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="problems11to20.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="problem8input.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="problem11input.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
