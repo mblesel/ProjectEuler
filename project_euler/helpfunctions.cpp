@@ -23,7 +23,7 @@ bool isPrime(int n)
 bool isPalindrome(int n)
 {
 	auto forward = std::to_string(n);
-	auto backwards = std::string(std::rbegin(forward), std::rend(forward));
+	auto backwards = std::string(forward.rbegin(), forward.rend());
 
 	return forward == backwards;
 }
